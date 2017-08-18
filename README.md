@@ -31,9 +31,6 @@ There are two images available:
 
 1. Dockerfile - Forked from https://github.com/saidimu/cayley-docker for release versions of cayley, here are the changes:
 
-
-#### Changes from fork:
-
 - Updated to latest release version of cayley
 - Rebuilding image automatically pulls latest released version of cayley from github.
 - Auto create initial config and init DB if it does not exist.
