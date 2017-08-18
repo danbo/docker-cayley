@@ -1,0 +1,12 @@
+version: "3" # version matters, see https://docs.docker.com/compose/networking/
+services:
+  cayley:
+    build: .
+    image: danbo/cayley
+    container_name: cayley
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+     - "64210:64210"
+    volumes:
+     - ./data:/data:rw
