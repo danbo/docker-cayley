@@ -27,16 +27,4 @@ Then open `http://<host>:64210` from your browser for the web GUI.
 
 #### Notes
 
-There are two images available:
-
-1. Dockerfile - Forked from https://github.com/saidimu/cayley-docker for release versions of cayley, here are the changes:
-
-- Updated to latest release version of cayley
-- Rebuilding image automatically pulls latest released version of cayley from github.
-- Auto create initial config and init DB if it does not exist.
-- Changed image to alpine with glibc support for minimal footprint
-- Removed fig for now.
-
-
-2. Dockerfile.master - Forked from https://github.com/sugarush/cayley, here are the changes:
--  Auto create initial config and init DB if it does not exist.
+From https://github.com/sugarush/cayley/tree/alpine-docker

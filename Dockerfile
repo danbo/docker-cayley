@@ -1,4 +1,4 @@
-# from https://github.com/sugarush/cayley/blob/master/Dockerfile
+# from https://github.com/sugarush/cayley/tree/alpine-docker
 
 FROM alpine:3.7
 
