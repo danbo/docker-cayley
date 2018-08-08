@@ -13,7 +13,7 @@ docker-compose build
 If you want the master build, you'll need to invoke the build manually
 
 ```
-docker build -t danbo/cayley -f Dockerfile.master .
+docker build -t danbo/cayley -f Dockerfile .
 ```
 
 then to run:
