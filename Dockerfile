@@ -1,11 +1,11 @@
 # from https://github.com/sugarush/cayley/tree/alpine-docker
 
-FROM alpine:3.7
+FROM alpine:3.8
 
 ENV INSTALL_PATH="/usr/local/bin"
 
 ENV PKG="ca-certificates" \
-    PKG_TMP="g++ git go glide" \
+    PKG_TMP="g++ git go dep" \
     PKG_CACHE="/var/cache/apk"
 
 ENV BUILD_LIB="github.com/cayleygraph/cayley" \
@@ -26,11 +26,10 @@ RUN mkdir -p ${GOPATH} && \
     cp -a docs /assets && \
     cp -a static /assets && \
     cp -a templates /assets && \
-    glide install && \
+    dep ensure && \
     go install -v ./cmd/cayley && \
     cp -a ${GOPATH}/bin/* ${INSTALL_PATH} && \
     rm -rf ${GOPATH} && \
-    rm -rf /root/.glide && \
     apk del --purge ${PKG_TMP} && \
     rm -rf ${PKG_CACHE}/*
 
